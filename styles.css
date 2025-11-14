@@ -8,12 +8,14 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f7f7f7;
+    /* Light pastel background */
+    background-color: #f9f9fa;
 }
 
 .header {
-    background: #222;
-    color: #fff;
+    /* Soft pastel header background and dark text for contrast */
+    background: #e8e0f0;
+    color: #333;
     padding: 1rem 0;
     position: fixed;
     width: 100%;
@@ -45,14 +47,14 @@ body {
 }
 
 .nav ul li a {
-    color: #fff;
+    color: #555;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 .nav ul li a:hover {
-    color: #ffd700;
+    color: #a875cd;
 }
 
 .hamburger {
@@ -65,7 +67,7 @@ body {
 .hamburger .bar {
     height: 3px;
     width: 25px;
-    background-color: #fff;
+    background-color: #555;
     margin: 4px 0;
     transition: all 0.3s ease;
 }
@@ -77,8 +79,9 @@ body {
 }
 
 .hero {
-    background: linear-gradient(135deg, #6c63ff, #3f3d56);
-    color: #fff;
+    /* Pastel gradient for hero section */
+    background: linear-gradient(135deg, #a5d8fa, #ffd5e0);
+    color: #333;
     padding-top: 6rem;
 }
 
@@ -95,7 +98,8 @@ body {
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: #ffd700;
+    /* Pastel button colour */
+    background: #a5d8fa;
     color: #333;
     border-radius: 5px;
     text-decoration: none;
@@ -104,11 +108,11 @@ body {
 }
 
 .btn:hover {
-    background: #ffcc00;
+    background: #8ccbf5;
 }
 
 .about, .projects, .contact {
-    background: #fff;
+    background: #ffffff;
     color: #333;
 }
 
@@ -120,7 +124,7 @@ body {
 }
 
 .project-item {
-    background: #f5f5f5;
+    background: #faf4ff;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -140,14 +144,15 @@ body {
 }
 
 .footer {
-    background: #222;
-    color: #fff;
+    background: #e8e0f0;
+    color: #333;
     padding: 1rem 0;
     text-align: center;
 }
 
 .highlight {
-    color: #ffd700;
+    /* Pastel highlight colour */
+    color: #a875cd;
 }
 
 @media (max-width: 768px) {
@@ -157,7 +162,7 @@ body {
         top: 60px;
         right: 0;
         width: 100%;
-        background: #222;
+        background: #e8e0f0;
         display: none;
     }
 
