@@ -1,6 +1,8 @@
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
+const sidebar = document.querySelector(".sidebar");
+const hamburger = document.querySelector(".hamburger");
 
-hamburger.addEventListener("click", () => {
-    navMenu.querySelector("ul").classList.toggle("show");
-});
+if (hamburger && sidebar) {
+    hamburger.addEventListener("click", () => {
+        sidebar.classList.toggle("show");
+    });
+}
