@@ -7,50 +7,66 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
+<body>
 
-    <body>
-    <!-- Animated emoji background -->
-    <div class="background-emoji">
-        <span>✨</span>
-        <span>🌸</span>
-        <span>💜</span>
-        <span>💫</span>
+    <!-- Decorative Background -->
+    <div class="background-emoji" aria-hidden="true">
+        <span>✨</span><span>🌸</span><span>💜</span><span>💫</span>
     </div>
 
-    <!-- Existing sidebar and main content follow… -->
-        
-<header class="header">
-    <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
         <h1 class="logo">Samantha&nbsp;Burwood</h1>
-        <nav class="nav" id="nav-menu">
+
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
+                <li><a class="active" href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <div class="hamburger" id="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
-    </div>
-</header>
 
-<section class="section about">
-    <div class="container">
-        <h2>About Me</h2>
-        <p>
-            I research and build projects at the intersection of complexity science, AI reasoning,
-            fuzzy logic, memory architectures, and human–AI collaboration.  
-            My work blends technical research, software engineering, and conceptual system design.
-        
-        </p>
-        <p>
-            
-            When im not working on my side projects I'm either skateboarding or running depending on the weather! ☔⚡
-        </p>
-    </div>
-</section>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+    </aside>
 
-<footer class="footer"><p>&copy; 2025 Samantha Burwood</p></footer>
-<script src="script.js"></script>
+    <!-- Main -->
+    <main class="main-content">
+        <section class="section">
+            <div class="card">
+                <h2>About Me</h2>
+
+                <p>
+                    I'm Samantha Burwood — on a mission to explore the
+                    systems that emerge when humans collaborate with AI.
+                </p>
+
+                <p>
+                    My work focuses on:
+                </p>
+
+                <ul>
+                    <li>AI agents & multi-agent systems</li>
+                    <li>Complexity theory & emergent behavior</li>
+                    <li>Fuzzy logic reasoning models</li>
+                    <li>Human–AI collaboration and interaction design</li>
+                </ul>
+
+                <p>
+                    I care about clarity, accessibility, and creating tools that help people think better — 
+                    especially in ambiguous or high-complexity environments.
+                </p>
+
+                <p>
+                    Outside of research, I enjoy illustration, soft pastels, and exploring how aesthetic design 
+                    shapes cognition and communication.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
