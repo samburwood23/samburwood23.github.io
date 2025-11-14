@@ -25,7 +25,7 @@
 
 /* ---------------------------
    Base Typography & Layout
----------------------------- */
+--------------------------- */
 html, body {
   margin: 0;
   padding: 0;
@@ -61,7 +61,7 @@ h3, .h3 {
 
 /* ---------------------------
    Links
----------------------------- */
+--------------------------- */
 a {
   color: var(--color-link);
   text-decoration: none;
@@ -77,10 +77,11 @@ a:focus {
 
 /* ---------------------------
    Buttons & Interactive
----------------------------- */
+--------------------------- */
 button,
 input[type="button"],
-input[type="submit"] {
+input[type="submit"],
+a.btn {
   background-color: var(--color-primary);
   color: var(--color-on-accent);
   border: none;
@@ -90,24 +91,29 @@ input[type="submit"] {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.25s ease;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
 }
 
 button:hover,
 input[type="submit"]:hover,
-input[type="button"]:hover {
+input[type="button"]:hover,
+a.btn:hover {
   background-color: var(--color-primary-hover);
 }
 
 button:focus-visible,
 input[type="submit"]:focus-visible,
-input[type="button"]:focus-visible {
+input[type="button"]:focus-visible,
+a.btn:focus-visible {
   outline: 3px solid var(--color-accent);
   outline-offset: 2px;
 }
 
 /* ---------------------------
    Sections & Containers
----------------------------- */
+--------------------------- */
 section {
   padding: 3rem 1rem;
 }
@@ -121,7 +127,7 @@ section {
 
 /* ---------------------------
    Cards
----------------------------- */
+--------------------------- */
 .card {
   background-color: #ffffff;
   border: 1px solid var(--color-border);
@@ -133,7 +139,7 @@ section {
 
 /* ---------------------------
    Hero Section
----------------------------- */
+--------------------------- */
 .hero {
   background-color: var(--color-accent);
   color: var(--color-on-accent);
@@ -150,7 +156,7 @@ section {
 
 /* ---------------------------
    Images
----------------------------- */
+--------------------------- */
 img {
   max-width: 100%;
   height: auto;
@@ -159,7 +165,7 @@ img {
 
 /* ---------------------------
    Dividers, small text
----------------------------- */
+--------------------------- */
 hr {
   border: none;
   border-top: 1px solid var(--color-border);
@@ -173,7 +179,7 @@ small {
 
 /* ---------------------------
    Accessibility Helpers
----------------------------- */
+--------------------------- */
 :focus-visible {
   outline: 3px solid var(--color-accent);
   outline-offset: 2px;
@@ -181,7 +187,7 @@ small {
 
 /* ---------------------------
    Utility Classes
----------------------------- */
+--------------------------- */
 .center {
   text-align: center;
 }
@@ -199,23 +205,146 @@ small {
 }
 
 /* ---------------------------
-   Navigation
----------------------------- */
-nav a {
-  margin-right: 1.5rem;
-  font-weight: 600;
+   Navigation / Sidebar (custom parts)
+--------------------------- */
+/* Sidebar container */
+.sidebar {
+  width: 260px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border-right: 1px solid var(--color-border);
+  padding: 2rem 1rem;
+  overflow-y: auto;
+  z-index: 1000;
+  transform: translateX(0);
+  transition: transform 0.35s ease;
 }
 
-nav a:hover {
-  color: var(--color-link-hover);
+/* Make room for sidebar on main content */
+.main-content {
+  margin-left: 260px;
+  transition: margin-left 0.35s ease, transform 0.35s ease, filter 0.35s ease;
+}
+
+/* Mobile / collapsed sidebar state */
+body.sidebar-open .sidebar {
+  transform: translateX(260px);
+}
+
+body.sidebar-open .main-content {
+  margin-left: 260px;
+  transform: translateX(260px);
+  filter: blur(2px) brightness(0.9);
+}
+
+/* Hamburger button */
+.hamburger {
+  background: none;
+  border: none;
+  display: none;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: var(--color-text);
+  transition: all 0.2s ease;
+}
+
+/* Sidebar nav list */
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar nav ul li a {
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.sidebar nav ul li a.active,
+.sidebar nav ul li a:hover {
+  color: var(--color-primary);
+}
+
+/* ---------------------------
+   Background Emoji Layer
+--------------------------- */
+.background-emoji {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* ensures clicks go through */
+  z-index: 0;
+  opacity: 0.15;
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.background-emoji span {
+  animation: float 8s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
 }
 
 /* ---------------------------
    Footer
----------------------------- */
+--------------------------- */
 footer {
   text-align: center;
   padding: 2rem 1rem;
   color: #555;
   font-size: 0.9rem;
+}
+
+/* ---------------------------
+   Responsive / Mobile Adjustments
+--------------------------- */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    transform: translateX(-100%);
+    left: 0;
+    top: 0;
+    z-index: 1000;
+  }
+
+  body.sidebar-open .sidebar {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar nav ul li {
+    margin-bottom: 1rem;
+  }
 }
