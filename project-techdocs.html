@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Technical Documentation</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation | Samantha Burwood</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-<header class="header">
-    <div class="container">
-        <h1 class="logo">Samantha&nbsp;Burwood</h1>
-        <nav class="nav" id="nav-menu">
-            <ul>
-                <li><a href="projects.html">← Back to Projects</a></li>
-            </ul>
-        </nav>
+
+<aside class="sidebar">
+    <h1 class="logo">Samantha&nbsp;Burwood</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="active" href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="hamburger">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
     </div>
-</header>
+</aside>
 
-<section class="section about">
-    <div class="container">
-        <h2>Technical Documentation</h2>
-        <p>
-            A collection of structured documentation, diagrams, reference materials,
-            and engineering notes across multiple software domains.
-        </p>
+<div class="main-content">
+    <section class="section about">
+        <div class="card">
+            <h2>Technical Documentation</h2>
+            <p>
+                A living collection of technical notes, diagrams, process explanations,
+                and conceptual documentation across infrastructure, AI systems,
+                and software engineering.
+            </p>
 
-        <a class="btn" target="_blank" href="https://github.com/samburwood23/TechnicalDocumentation">View Repository</a>
-    </div>
-</section>
+            <a class="btn" target="_blank" href="https://github.com/samburwood23/TechnicalDocumentation">
+                View Repository
+            </a>
+            <p class="back-link"><a href="projects.html">← Back to Projects</a></p>
+        </div>
+    </section>
+</div>
 
-<footer class="footer"><p>&copy; 2025 Samantha Burwood</p></footer>
 <script src="script.js"></script>
 </body>
 </html>
