@@ -1,6 +1,7 @@
-const sidebar = document.querySelector('.sidebar');
+// Mobile sidebar toggle
 const hamburger = document.querySelector('.hamburger');
+const body = document.body;
 
 hamburger.addEventListener('click', () => {
-    document.body.classList.toggle('sidebar-open');
+    body.classList.toggle('sidebar-open');
 });
