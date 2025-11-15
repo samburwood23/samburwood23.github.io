@@ -6,76 +6,37 @@
     <title>Contact | Samantha Burwood</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <!-- Decorative Background -->
-    <div class="background-emoji" aria-hidden="true">
-        <span>✨</span><span>🌸</span><span>💜</span><span>💫</span>
-    </div>
+<div class="hamburger">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+</div>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <h1 class="logo">Samantha&nbsp;Burwood</h1>
+<aside class="sidebar">
+    <h1 class="logo">Samantha&nbsp;Burwood</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</aside>
 
-        <nav aria-label="Main navigation">
+<div class="main-content">
+    <section class="section">
+        <div class="card">
+            <h2>Contact Me</h2>
+            <p>You can reach me through the following:</p>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a class="active" href="contact.html">Contact</a></li>
+                <li>Email: <strong>samanthaburwood@gmail.com</strong></li>
+                <li>GitHub: <strong>github.com/samburwood23</strong></li>
             </ul>
-        </nav>
+        </div>
+    </section>
+</div>
 
-        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="main-content">
-
-        <!-- Contact Hero -->
-        <section class="section hero">
-            <div class="card center">
-                <h2>Get in Touch</h2>
-                <p>
-                    Whether you want to discuss a project, collaborate, or talk research —
-                    I’d love to hear from you.
-                </p>
-
-                <a href="mailto:samanthaburwood@gmail.com" class="btn">Email Me</a>
-            </div>
-        </section>
-
-        <!-- Social Links -->
-        <section class="section">
-            <div class="card">
-                <h3>Other Places to Find Me</h3>
-
-                <ul>
-                    <li>
-                        <a href="https://github.com/samburwood23" target="_blank" rel="noopener">
-                            GitHub
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https:https://www.linkedin.com/in/samantha-burwood-39647015b"
-                           target="_blank" 
-                           rel="noopener">
-                            LinkedIn
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-    </main>
-
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
