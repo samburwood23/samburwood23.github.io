@@ -6,67 +6,45 @@
     <title>About | Samantha Burwood</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <!-- Decorative Background -->
-    <div class="background-emoji" aria-hidden="true">
-        <span>✨</span><span>🌸</span><span>💜</span><span>💫</span>
-    </div>
+<div class="hamburger">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+</div>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <h1 class="logo">Samantha&nbsp;Burwood</h1>
+<aside class="sidebar">
+    <h1 class="logo">Samantha&nbsp;Burwood</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</aside>
 
-        <nav aria-label="Main navigation">
+<div class="main-content">
+    <section class="section">
+        <div class="card">
+            <h2>About Me</h2>
+            <p>
+                I am passionate about exploring the boundaries between emerging AI systems 
+                and the humans who interact with them.  
+            </p>
+            <p>
+                My research interests include:
+            </p>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a class="active" href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li>AI agents & multi-agent systems</li>
+                <li>Complex systems & emergent behavior</li>
+                <li>Fuzzy logic & reasoning under uncertainty</li>
+                <li>Human–AI collaboration</li>
             </ul>
-        </nav>
+        </div>
+    </section>
+</div>
 
-        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
-            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        </button>
-    </aside>
-
-    <!-- Main -->
-    <main class="main-content">
-        <section class="section">
-            <div class="card">
-                <h2>About Me</h2>
-
-                <p>
-                    I'm Samantha Burwood — on a mission to explore the
-                    systems that emerge when humans collaborate with AI.
-                </p>
-
-                <p>
-                    My work focuses on:
-                </p>
-
-                <ul>
-                    <li>AI agents & multi-agent systems</li>
-                    <li>Complexity theory & emergent behavior</li>
-                    <li>Fuzzy logic reasoning models</li>
-                    <li>Human–AI collaboration and interaction design</li>
-                </ul>
-
-                <p>
-                    I care about clarity, accessibility, and creating tools that help people think better — 
-                    especially in ambiguous or high-complexity environments.
-                </p>
-
-                <p>
-                    Outside of research, I enjoy illustration, soft pastels, and exploring how aesthetic design 
-                    shapes cognition and communication.
-                </p>
-            </div>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
