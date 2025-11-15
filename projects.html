@@ -1,62 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Samantha Burwood</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Animated emoji background -->
-    <div class="background-emoji">
-        <span>✨</span>
-        <span>🌸</span>
-        <span>💜</span>
-        <span>💫</span>
-    </div>
+<div class="hamburger">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+</div>
 
-    <!-- Sidebar navigation -->
-    <aside class="sidebar">
-        <h1 class="logo">Samantha&nbsp;Burwood</h1>
-        <nav>
+<aside class="sidebar">
+    <h1 class="logo">Samantha&nbsp;Burwood</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="active" href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<div class="main-content">
+    <section class="section">
+        <div class="card">
+            <h2>Projects</h2>
+            <p>Here are some of the systems, models, and experimental environments I’ve built or explored.</p>
+
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a class="active" href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><strong>Emergent-Agent Sandbox:</strong> A framework for studying agent interactions.</li>
+                <li><strong>Adaptive Fuzzy Logic Controller:</strong> A reasoning system for uncertain inputs.</li>
+                <li><strong>Human-AI Collaboration Toolkit:</strong> Tools for cooperative problem solving.</li>
+                <li><strong>Complexity Visualizer:</strong> A tool for mapping emergent behaviors.</li>
             </ul>
-        </nav>
-        <div class="hamburger">
-            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
         </div>
-    </aside>
+    </section>
+</div>
 
-    <!-- Main content area -->
-    <div class="main-content">
-        <section class="section projects">
-            <h2>Featured Projects</h2>
-            <div class="project-list">
-                <div class="project-item">
-                    <h3><a href="project-complexity.html">Complexity Theory &amp; AI Agents</a></h3>
-                    <p>An exploration of complexity classes, the verification–generation gap, and agent reasoning.</p>
-                </div>
-                <div class="project-item">
-                    <h3><a href="project-fuzzylogic.html">Fuzzy Logic DEI Lab</a></h3>
-                    <p>A fuzzy logic model analysing stress, DEI impact and systemic bias in workplaces.</p>
-                </div>
-                <div class="project-item">
-                    <h3><a href="project-stateful.html">Stateful vs Stateless Systems</a></h3>
-                    <p>Research on memory architectures, context windows and temporal alignment in human–AI workflows.</p>
-                </div>
-                <div class="project-item">
-                    <h3><a href="project-techdocs.html">Technical Documentation</a></h3>
-                    <p>Structured engineering notes, diagrams and conceptual documentation across multiple domains.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
