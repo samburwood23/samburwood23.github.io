@@ -7,33 +7,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Animated emoji background -->
-    <div class="background-emoji">
-        <span>✨</span>
-        <span>🌸</span>
-        <span>💜</span>
-        <span>💫</span>
-    </div>
 
-    <!-- Hamburger (MOVED OUTSIDE SIDEBAR) -->
+<aside class="sidebar">
+    <h1 class="logo">Samantha&nbsp;Burwood</h1>
+    <nav>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
     <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
     </div>
+</aside>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <h1 class="logo">Samantha&nbsp;Burwood</h1>
-        <nav>
-            <ul>
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </aside>
+<div class="main-content">
+    <section class="section hero">
+        <div class="card">
+            <h2>Hello, I'm <span class="highlight">Samantha Burwood</span></h2>
+            <p>
+                I design and explore systems at the intersection of AI agents, complexity theory,
+                fuzzy logic, and human–AI collaboration.
+            </p>
+            <a href="projects.html" class="btn">Explore My Work</a>
+        </div>
+    </section>
+</div>
 
-    <!-- Main Content -->
-    <div class="main-content">
+<script src="script.js"></script>
+</body>
+</html>
